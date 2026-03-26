@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kombucha 27</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #f4fdf6;
+      scroll-behavior: smooth;
+    }
+
+    header, nav, footer {
+      text-align: center;
+      color: white;
+    }
+
+    header {
+      background: #2e8b57;
+      padding: 20px;
+    }
+
+    nav {
+      background: #246b45;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000; /* FIX biar ga ketiban gambar */
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1604908177522-3e6c1f0dfbd7') center/cover;
+    }
+
+    .hero h1 {
+      background: rgba(255,255,255,0.85);
+      display: inline-block;
+      padding: 15px;
+      border-radius: 10px;
+      color: #2e8b57;
+    }
+
+    /* SECTION PENJELASAN (LOGO KIRI, TEXT KANAN) */
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 50px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about img {
+      width: 200px; /* LOGO DIPERBESAR */
+    }
+
+    .about-text {
+      text-align: left; /* FIX jadi rata kiri */
+      line-height: 1.7;
+    }
+
+    .promo {
+      background: #ffe082;
+      padding: 25px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .img-container {
+      position: relative;
+    }
+
+    .main {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .sticker {
+      width: 70px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border-radius: 50%;
+      opacity: 0.9;
+    }
+
+    button {
+      background: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #246b45;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 40px;
+    }
+
+    footer {
+      background: #2e8b57;
+      padding: 15px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header id="home">
+  <h1>Kombucha 27 🍃</h1>
+  <p>Sehat • Segar • Berkualitas</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+  <h1>Minuman Sehat, Hidup Lebih Baik</h1>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about">
+  <img src="logo kombucha.jpeg">
+
+  <div class="about-text">
+    <h2>Apa itu Kombucha?</h2>
+    <p>
+      Kombucha adalah minuman hasil fermentasi teh yang telah dikenal sejak lama sebagai minuman kesehatan alami. Proses fermentasi ini menghasilkan probiotik, enzim, dan asam organik yang bermanfaat bagi tubuh, terutama untuk menjaga keseimbangan sistem pencernaan.
+    </p>
+
+    <h2>Terbuat dari apa?</h2>
+    <p>
+      Kombucha dibuat dari teh (hitam atau hijau), gula, dan kultur bakteri baik yang disebut SCOBY. Selama proses fermentasi, gula akan diubah menjadi zat-zat yang bermanfaat sehingga menghasilkan rasa khas yang sedikit asam, segar, dan menyegarkan.
+    </p>
+
+    <h2>Manfaat Kombucha</h2>
+    <p>
+      Mengonsumsi kombucha secara rutin dapat membantu melancarkan pencernaan, meningkatkan energi, serta menjaga daya tahan tubuh. Selain itu, kandungan antioksidannya juga baik untuk membantu melawan radikal bebas dan mendukung gaya hidup sehat secara keseluruhan.
+    </p>
+  </div>
+</section>
+
+<div class="promo">
+  🎉 Promo Spesial: Beli 2 botol (rasa apa saja) hanya Rp25.000!  
+  <br>
+  Berlaku hingga akhir Maret — jangan sampai kehabisan!
+</div>
+
+<section class="products" id="products">
+
+  <div class="card">
+    <div class="img-container">
+      <img class="main" src="teh hitam.jpeg">
+      <img class="sticker" src="logo kombucha.jpeg">
+    </div>
+    <h3>Teh Hitam</h3>
+    <p>Rp15.000</p>
+    <a href="https://wa.me/6281281603886?text=Saya%20mau%20pesan%20Teh%20Hitam">
+      <button>Beli via WhatsApp</button>
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="img-container">
+      <img class="main" src="teh hijau.jpeg">
+      <img class="sticker" src="logo kombucha.jpeg">
+    </div>
+    <h3>Teh Hijau</h3>
+    <p>Rp15.000</p>
+    <a href="https://wa.me/6281281603886?text=Saya%20mau%20pesan%20Teh%20Hijau">
+      <button>Beli via WhatsApp</button>
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="img-container">
+      <img class="main" src="teh telang.jpeg">
+      <img class="sticker" src="logo kombucha.jpeg">
+    </div>
+    <h3>Teh Telang</h3>
+    <p>Rp15.000</p>
+    <a href="https://wa.me/6281281603886?text=Saya%20mau%20pesan%20Teh%20Telang">
+      <button>Beli via WhatsApp</button>
+    </a>
+  </div>
+
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <p>Pesan langsung via WhatsApp:</p>
+  <p><b>081281603886</b></p>
+</section>
+
+<footer>
+  <p>© 2026 Kombucha 27</p>
+</footer>
+
+</body>
+</html>
